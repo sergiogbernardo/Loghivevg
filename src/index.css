@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-black;
+  }
+
+  body {
+    @apply bg-black font-sans text-slate-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-emerald-400 text-black;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-emerald-500/15 bg-black/70 p-5 backdrop-blur-md;
+  }
+
+  .panel-title {
+    @apply font-display text-sm font-semibold uppercase tracking-wider text-emerald-300/80;
+  }
+
+  .field-label {
+    @apply mb-1.5 block font-mono text-xs uppercase tracking-wider text-slate-400;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-emerald-500/15 bg-black/60 px-3 py-2 font-mono text-sm text-slate-100 outline-none transition focus:border-emerald-400/60 focus:ring-1 focus:ring-emerald-400/40;
+  }
+
+  .textarea {
+    @apply input min-h-[10rem] resize-y leading-relaxed;
+  }
+
+  .btn {
+    @apply rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 font-display text-sm font-semibold text-emerald-200 transition hover:border-emerald-400/60 hover:bg-emerald-500/20 disabled:opacity-40;
+  }
+}
+
+@layer utilities {
+  .bg-grid-glow {
+    background-image: radial-gradient(circle at 50% 0%, rgba(52, 211, 153, 0.1), transparent 60%);
+  }
+}

@@ -11,7 +11,9 @@ function counter(values: (string | number)[]): Map<string, number> {
 }
 
 function topN(map: Map<string, number>, n?: number): { value: string; count: number }[] {
-  const sorted = [...map.entries()].sort((a, b) => b[1] - a[1]).map(([value, count]) => ({ value, count }));
+  const sorted = [...map.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([value, count]) => ({ value, count }));
   return n ? sorted.slice(0, n) : sorted;
 }
 

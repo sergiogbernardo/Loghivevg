@@ -19,8 +19,7 @@ export default function RegexLabPanel() {
   const [mode, setMode] = useState<'test' | 'replace'>('test');
   const [replacement, setReplacement] = useState('');
 
-  const toggleFlag = (id: string) =>
-    setFlags((f) => (f.includes(id) ? f.replace(id, '') : f + id));
+  const toggleFlag = (id: string) => setFlags((f) => (f.includes(id) ? f.replace(id, '') : f + id));
 
   const result = useMemo(() => {
     if (!pattern) return null;
@@ -47,7 +46,10 @@ export default function RegexLabPanel() {
 
           <div className="flex flex-wrap items-center gap-3">
             {FLAGS.map((f) => (
-              <label key={f.id} className="flex items-center gap-1.5 font-mono text-xs text-slate-400">
+              <label
+                key={f.id}
+                className="flex items-center gap-1.5 font-mono text-xs text-slate-400"
+              >
                 <input
                   type="checkbox"
                   checked={flags.includes(f.id)}

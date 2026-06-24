@@ -89,7 +89,11 @@ export default function LogParserPanel() {
           />
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <select className="input max-w-xs" value={format} onChange={(e) => setFormat(e.target.value)}>
+          <select
+            className="input max-w-xs"
+            value={format}
+            onChange={(e) => setFormat(e.target.value)}
+          >
             {FORMAT_OPTIONS.map((o) => (
               <option key={o.id} value={o.id} className="bg-slate-900">
                 {o.label}
@@ -135,7 +139,10 @@ export default function LogParserPanel() {
                 <thead>
                   <tr className="border-b border-emerald-500/20 text-emerald-300/80">
                     {parsed.fields.map((f) => (
-                      <th key={f} className="whitespace-nowrap px-2 py-1.5 font-semibold uppercase tracking-wider">
+                      <th
+                        key={f}
+                        className="whitespace-nowrap px-2 py-1.5 font-semibold uppercase tracking-wider"
+                      >
                         {f}
                       </th>
                     ))}
@@ -145,7 +152,11 @@ export default function LogParserPanel() {
                   {parsed.rows.slice(0, 200).map((row, i) => (
                     <tr key={i} className="border-b border-emerald-500/5 text-slate-300">
                       {parsed.fields.map((f) => (
-                        <td key={f} className="max-w-xs truncate px-2 py-1" title={String(row[f] ?? '')}>
+                        <td
+                          key={f}
+                          className="max-w-xs truncate px-2 py-1"
+                          title={String(row[f] ?? '')}
+                        >
                           {String(row[f] ?? '')}
                         </td>
                       ))}

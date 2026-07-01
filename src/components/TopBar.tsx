@@ -1,4 +1,4 @@
-const HUB_URL = 'https://sergiogbernardo.github.io/';
+const HUB_URL = 'https://sabion.io/';
 
 export default function TopBar() {
   return (

@@ -4,10 +4,10 @@ Log and text analysis toolkit that runs **entirely in the browser**. The GitHub
 Pages version of the local `loghive` project — no backend, no upload; every line
 you paste stays on your machine.
 
-Part of the [project hub](https://sergiogbernardo.github.io/), alongside
-[Bytevg](https://sergiogbernardo.github.io/Bytevg/),
-[Scanvg](https://sergiogbernardo.github.io/Scanvg/) and
-[Inspectorvg](https://sergiogbernardo.github.io/Inspectorvg/).
+Part of the [project hub](https://sabion.io/), alongside
+[Bytevg](https://sabion.io/Bytevg/),
+[Scanvg](https://sabion.io/Scanvg/) and
+[Inspectorvg](https://sabion.io/Inspectorvg/).
 
 ## Tools
 
